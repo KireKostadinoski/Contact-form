@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple tailwind starter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="w-full  bg-Green200 p-4">
+        <div id="success" class="w-1/4 p-4 text-sm text-left mx-auto text-white bg-Grey900 rounded-lg hidden">
+         <h3>Message sent!</h3>
+         <p>Thanks for completing the form.We'll be in touch soon.</p>
+        </div>
+        <div class="w-full bg-White rounded-xl flex flex-col space-y-4 p-6 xl:w-2/3 xl:mx-auto">
+            <h1 class="text-4xl font-bold">Contact Us</h1>
+            <div class="flex flex-col w-full xl:flex-row xl:space-x-6">
+                <div class="flex flex-col w-full space-y-2">
+                    <label for="" class="font-semibold text-Grey500">First Name <span
+                            class="text-Green600">*</span></label>
+                    <input type="text" name="" id="firstNameInput"
+                        class="w-full h-10 px-4 text-lg text-Grey900 border-2 border-gray-300 rounded-lg focus:border-green-700 outline-none">
+                    <p class="text-Red font-semibold" id="errorFirstName"></p>
+                </div>
+                <div class="flex flex-col w-full space-y-2">
+                    <label for="" class="font-semibold text-Grey500">Last Name <span
+                            class="text-Green600">*</span></label>
+                    <input type="text" name="" id="lastNameInput"
+                        class="w-full h-10 px-4 text-lg text-Grey900 border-2 border-gray-300 rounded-lg  focus:border-green-700 outline-none">
+                    <p class="text-Red font-semibold" id="errorLastName"></p>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <label for="" class="font-semibold text-Grey500">Email Address <span
+                        class="text-Green600">*</span></label>
+                <input type="email" name="" id="emailInput"
+                    class="w-full h-10 px-4 text-lg text-Grey900 border-2 border-gray-300 rounded-lg  focus:border-green-700 outline-none">
+                <p class="text-Red font-semibold" id="errorEmail"></p>
+
+            </div>
+            <label for="" class="font-semibold text-Grey500">Query Type<span class="text-Green600">*</span></label>
+            <div class="flex flex-col items-center space-y-4 xl:flex-row xl:space-x-6 xl:space-y-0">
+                <div id="divGeneral"
+                    class="w-full h-12 px-8 flex flex-row justify-start items-center space-x-4 border-2 border-gray-300 rounded-lg  focus:border-green-700 outline-none">
+                    <input type="radio" name="" id="firstRadio" class="w-4 h-4">
+                    <label for="" class="text-lg">General Enquiry</label>
+                </div>
+                <div id="divSupport"
+                    class="w-full h-12 px-8 flex flex-row justify-start items-center space-x-4 border-2 border-gray-300 rounded-lg  focus:border-green-700 outline-none">
+                    <input type="radio" name="" id="secondRadio" class="w-4 h-4">
+                    <label for="" class="text-lg">Support Request</label>
+                </div>
+            </div>
+            <p class="text-Red font-semibold" id="errorQuery"></p>
+
+            <div class="flex flex-col space-y-4">
+                <label for="" class="font-semibold text-Grey500">Message <span class="text-Green600 ">*</span></label>
+                <textarea name="" id="textMsg" rows="6" cols="20"
+                    class="rounded-lg p-4 border-2 border-gray-300  focus:border-green-700 outline-none"></textarea>
+                <p class="text-Red font-semibold hidden" id="errorMsg">This field is required</p>
+
+            </div>
+
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center space-x-4">
+                    <input type="checkbox" class="w-5 h-5" name="" id="checkboxInput">
+                    <label for="" class="font-semibold text-Grey500 text-lg">I consent to being contacted by the team
+                        <span class="text-Green600 ">*</span></label>
+
+                </div>
+                <p class="text-Red font-semibold" id="errorConsent"></p>
+
+            </div>
+
+
+            <div id="submitBtn"
+                class="w-full py-3 px-8 rounded-lg bg-Green600 text-White text-center cursor-pointer hover:bg-green-900 duration-200">
+                Submit
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
